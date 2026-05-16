@@ -12,9 +12,19 @@ const app = express()
 //connect database
 await connectDB()
 
+
+
 // middleware
 
 app.use(cors());
+
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://https://fancy-gecko-bb595b.netlify.app/"
+  ],
+  credentials: true,
+}));
 app.use(express.json());
 
 app.get("/",(req,res)=> res.send("server is running"))
