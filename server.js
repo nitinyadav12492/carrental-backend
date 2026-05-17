@@ -21,6 +21,7 @@ app.use(cors());
 app.use(cors({
   origin: [
     "http://localhost:5173",
+    "https://carrental-nine-tau.vercel.app",
     "https://fancy-gecko-bb595b.netlify.app"
   ],
   credentials: true,
